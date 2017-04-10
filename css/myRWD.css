@@ -1,0 +1,224 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+}
+
+a {
+  color: white;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background: rgba(0,0,0,0.2);
+  padding: 20px 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+a:hover {
+  background: rgba(0,0,0,0.3);
+}
+
+img {
+  width:100%;
+}
+
+input {
+  padding:10px;
+  border:0;
+}
+
+section, footer {
+  text-align: center;
+  background: rgba(0,0,0,0.2);
+  padding: 20px;
+  margin: 20px 0;
+  color: white;
+  font-weight: 100;
+}
+
+/* Buttons styles. */
+[class*="btn-"] {
+  padding: 10px 10px;
+}
+
+.btn-round {
+  border-radius: 4px;
+}
+
+.btn-default {
+  background-color: #FEFF00;
+  color: black;
+  border: none;
+}
+
+.btn-default:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: translate(0, -5px);
+}
+
+.btn-default:active {
+  background-color: rgb(232, 232, 232);
+}
+
+
+/* Desktop view - Default */
+/* Flex container. */
+.container-flex {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.container-flex > * {
+  order: 9999;
+}
+
+/* Navigation bar. */
+.nav-flex {
+  order: 1;
+}
+
+.toggleNav {
+  display: none;
+}
+
+/* Flex container for navigation bar. */
+.nav-flex ul {
+  border: 1px solid black;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Flex item for navigation bar. */
+.nav-flex li {
+  flex: 3;
+}
+
+.nav-flex .social {
+  flex: 1;
+}
+
+/* Pricing grid. */
+.plan-flex:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: translate(0, -5px);
+}
+
+.plan-flex ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plan-flex ul li {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+.plan-flex ul li:last-child {
+  border-bottom: 0;
+}
+
+.plan-flex a {
+  text-decoration: none;
+  background: #FEFF00;
+  padding: 10px;
+  color: black;
+  border-radius: 4px;
+}
+
+.plan-flex h3 {
+  margin: 5px 0px;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+}
+
+.price {
+  font-size: 24px;
+  font-family: serif;
+  margin: 10px 0;
+}
+
+/* Flex container for pricing grid. */
+.pricing-grid-flex {
+  /*max-width: 750px;*/
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Flex item (plan) for pricing grid. */
+.plan-flex {
+  flex: 1 1 calc(33.33% - 40px);
+  background: rgba(255, 255, 255, 0.2);
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  /*flex-wrap: wrap;*/
+}
+
+/* Nested-flex item (plan's item) for pricing grid. */
+.plan-flex > * {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+.plan-flex .cta {
+  align-self: flex-end;
+}
+
+
+/* Mobile view. */
+@media all and (max-width: 600px) {
+  /* Flex container */
+  .container-flex {
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  /* Navigation bar. */
+  .toggleNav {
+    display: block;
+  }
+
+  .nav-flex ul {
+    display: none;
+  }
+
+  .nav-flex ul.open {
+    display: flex;
+  }
+
+  .nav-flex li {
+    flex-basis: 100%;
+  }
+
+  /* Pricing grid. */
+  .pricing-grid-flex {
+    flex-direction: column;
+  }
+}
+
+/* Tablet view. */
+@media all and (max-width: 768px) {
+
+}
