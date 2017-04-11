@@ -17,14 +17,19 @@
 
 		<xsl:for-each select="list/product">
 			<div class="plan-flex">
-				<img><xsl:attribute name="src"><xsl:value-of select="pImgPath"/></xsl:attribute></img>
+				<img class="img-prod-thumbnail">
+					<xsl:attribute name="src"><xsl:value-of select="pImgPath"/></xsl:attribute>
+					<xsl:attribute name="class">img-prod-thumbnail</xsl:attribute>
+				</img>
 
 				<h3><xsl:value-of select="pName"/></h3>
 
 				<ul>
 					<li class="txt-prod-desc"><xsl:value-of select="pDesc"/></li>
+					<li id="value-discount" style="display:none; "><xsl:value-of select="pDiscount"/></li>
 					<li><xsl:value-of select="pDiscount"/>% Discount</li>
-					<li class="price">RM <xsl:value-of select="pPrice"/></li>
+					<li id="value-price" style="display:none; "><xsl:value-of select="pPrice"/></li>
+					<li class="price"></li>
 				</ul>
 
 				<a href="#" class="cta">QUICK VIEW</a>

@@ -1,3 +1,77 @@
+@font-face { 
+  font-family: "Say It Fat";
+  src: url("../fonts/sayitfat.otf");
+}
+
+@font-face {
+	font-family: "Noir Regular";
+	src: url("../fonts/Noir_regular.otf");
+}
+
+body {
+	/*background-image: url("../images/ui/BG.jpg");
+	background-size: 300px 600px;
+    background-repeat: repeat;*/
+}
+
+a, footer {
+  color: rgb(86, 70, 46);
+}
+
+.logo {
+	font-size: 48px;
+  	font-family: "Say It Fat"; 
+}
+
+
+/********************************* Buttons styles ********************************/
+[class*="btn-"] {
+  padding: 10px 10px;
+}
+
+.btn-round {
+  border-radius: 4px;
+}
+
+.btn-default {
+  background-color: #FEFF00;
+  color: black;
+  border: none;
+}
+
+.btn-default:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: translate(0, -5px);
+}
+
+.btn-default:active {
+  background-color: rgb(232, 232, 232);
+}
+/*********************************************************************************/
+
+/*.container-flex {
+	background: rgb(255, 246, 221);
+}*/
+
+.plan-flex h3 {
+  margin: 5px 0px;
+  text-transform: uppercase;
+  color: rgb(86, 70, 46);
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+}
+
 .txt-prod-desc {
 	font-size: 12px;
+}
+
+.txt-prod-oriPrice {
+	font-size: 12px;
+	text-decoration: line-through;
+	color: rgb(200, 200, 200);
+}
+
+.img-prod-thumbnail {
+	max-width: 350px;
+	height: auto;
 }
